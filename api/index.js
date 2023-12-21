@@ -1,4 +1,5 @@
-import { Express } from "express";
+import { express } from "express";
+import cors from "cors";
 
 import multer from 'multer';
 
@@ -18,7 +19,7 @@ import historiasClinicasRoutes from './api/routes/historias_clinicas.routes.js';
 
 const app = express();
 
-
+app.use(cors())
 app.use(express.json());
 
 app.use('/',express.static('public'))
