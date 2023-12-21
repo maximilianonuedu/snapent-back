@@ -1,5 +1,5 @@
 import { Express } from "express";
-import cors from 'cors';
+
 import multer from 'multer';
 
 import * as usuariosService from './services/usuarios.services.js';
@@ -18,7 +18,7 @@ import historiasClinicasRoutes from './api/routes/historias_clinicas.routes.js';
 
 const app = express();
 
-app.use(cors())
+
 app.use(express.json());
 
 app.use('/',express.static('public'))
@@ -35,12 +35,12 @@ app.use(historiasClinicasRoutes)
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         let tipo = req.params.tipo;
-        let path = ⁠ ./../front/snapent/public/${tipo} ⁠;
+        let path = `./../front/snapent/public/${tipo}`;
 
         return cb(null, path)
     },
     filename: function(req, file, cb) {
-        return cb(null, ⁠ ${Date.now()}_${file.originalname} ⁠)
+        return cb(null, `${Date.now()}_${file.originalname}`)
     }
 })
 
