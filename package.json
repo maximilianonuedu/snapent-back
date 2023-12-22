@@ -5,9 +5,7 @@
   "description": "TESIS - SNAPENT",
   "scripts": {
     "mai": "cls && nodemon expressServer.js",
-    "maxi": "clear && nodemon expressServer.js",
-    "build":"tsc",
-    "lint":"slint --fix src test"
+    "maxi": "clear && nodemon expressServer.js"
   },
   "repository": {
     "type": "git",

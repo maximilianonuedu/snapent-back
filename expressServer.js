@@ -109,6 +109,6 @@ app.post('/upload/:tipo/:idProfesional/:idPaciente', upload.single('file'), (req
     }
 })
 
-app.listen(2023, function () {
-    console.log('Ingresá al servidor: http://localhost:2023');
+app.listen(2024, function () {
+    console.log('Ingresá al servidor: http://localhost:2024');
 })

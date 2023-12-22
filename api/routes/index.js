@@ -1,7 +1,7 @@
-import { express } from "express";
-import cors from "cors";
+import express from "express";
+import cors from 'cors';
+import multer from "multer";
 
-import multer from 'multer';
 
 import * as usuariosService from './services/usuarios.services.js';
 import * as profesionalesService from './services/profesionales.services.js';
@@ -11,18 +11,18 @@ import usuariosRoutes from './api/routes/usuarios.routes.js';
 import profesionalesRoutes from './api/routes/profesionales.routes.js';
 import especialidadesRoutes from './api/routes/especialidades.routes.js';
 import turnosRoutes from './api/routes/turnos.routes.js';
-
 import consultoriosRoutes from './api/routes/consultorios.routes.js';
 import obrasSocialesRoutes from './api/routes/obras_sociales.routes.js';
 import authRoutes from './api/routes/auth.routes.js';
 import historiasClinicasRoutes from './api/routes/historias_clinicas.routes.js';
 
-const app = express();
 
+const app = express();
 app.use(cors())
 app.use(express.json());
 
 app.use('/',express.static('public'))
+
 
 app.use(usuariosRoutes)
 app.use(profesionalesRoutes)
@@ -109,4 +109,4 @@ app.post('/upload/:tipo/:idProfesional/:idPaciente', upload.single('file'), (req
     }
 })
 
-export default app
+export default app;
