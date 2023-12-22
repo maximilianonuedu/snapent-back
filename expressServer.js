@@ -109,6 +109,8 @@ app.post('/upload/:tipo/:idProfesional/:idPaciente', upload.single('file'), (req
     }
 })
 
-app.listen(2024, function () {
+const port = process.env.PORT || 2024;
+
+app.listen(port, function () {
     console.log('Ingresá al servidor: http://localhost:2024');
 })
