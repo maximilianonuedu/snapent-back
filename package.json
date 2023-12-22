@@ -4,6 +4,7 @@
   "type": "module",
   "description": "TESIS - SNAPENT",
   "scripts": {
+    "start":"node expressServer.js",
     "mai": "cls && nodemon expressServer.js",
     "maxi": "clear && nodemon expressServer.js"
   },
