@@ -7,8 +7,7 @@
     "mai": "cls && nodemon expressServer.js",
     "maxi": "clear && nodemon expressServer.js",
     "build":"tsc",
-    "lint":"slint --fix src test",
-    "vercel-build":"echo hello"
+    "lint":"slint --fix src test"
   },
   "repository": {
     "type": "git",
